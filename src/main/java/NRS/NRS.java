@@ -52,19 +52,12 @@ public class NRS implements NumberRangeSummarizer {
         int prev = list.get(0), start = prev;
         for(int next: list.subList(1, list.size())) {
             if(prev + 1 != next) {
-                if (start < 0) {
+                if(start != prev) {
                     sb.append("[").append(start);
-                    if(start != prev) {
-                        sb.append(prev - start > 1 ? ".." : ", ")
-                                .append(prev);
-                    }
-                    sb.append("]");
+                    sb.append(prev - start > 1 ? ".." : ", ")
+                            .append(prev).append("]");
                 } else {
                     sb.append(start);
-                    if(start != prev) {
-                        sb.append(prev - start > 1 ? "-" : ", ")
-                                .append(prev);
-                    }
                 }
                 sb.append(", ");
                 start = next;
