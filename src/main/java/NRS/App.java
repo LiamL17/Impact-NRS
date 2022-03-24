@@ -28,9 +28,9 @@ public class App {
      */
     public static String usage(String[] args) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Invalid arguments: ").append(Arrays.asList(args)).append("\n");
-        sb.append("Usage:\nApp [--file | -f] <relative fileName>\nApp <string>\n");
-        sb.append("Example:\nApp --file src/main/resources/in1.txt\nApp 1,2,3,4,6,7,10");
+        sb.append("Invalid arguments: ").append(Arrays.asList(args)).append("\n\n");
+        sb.append("Usage:\nApp [--file | -f] <relative fileName>\nApp <string>\n\n");
+        sb.append("Example:\nApp --file src/main/resources/in1.txt\nApp 1,2,3,4,6,7,10\n");
         return sb.toString();
     }
 
